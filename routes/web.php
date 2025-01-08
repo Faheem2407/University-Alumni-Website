@@ -66,8 +66,6 @@ Route::controller(AdminController::class)->group(function(){
 });
 
 
-
-
 Route::controller(HomeController::class)->group(function(){
 	Route::get('/faculty-of-arts','arts')->name('arts');
 	Route::get('/faculty-of-science-and-enginneering','science_and_enginneering')->name('science_and_enginneering');
@@ -77,6 +75,8 @@ Route::controller(HomeController::class)->group(function(){
 	Route::get('/faculty-of-law','law')->name('law');
 	
 });
+
+
 
 
 Route::controller(HomeController::class)->group(function (){

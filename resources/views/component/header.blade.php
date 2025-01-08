@@ -34,8 +34,6 @@
 			
 			
 			
-			
-			
 			<span>&nbsp;&nbsp;</span>
 			<li class="nav-item">
 				<div class="dropdown">
@@ -69,7 +67,7 @@
 						</a></li>												
 					</ul>
 				</div>
-			</li>	
+			</li>
 			
 			
 			<span>&nbsp;&nbsp;</span>

@@ -33,7 +33,12 @@
 		The JKKNIU Alumni Scocity maintains and enhances a highly engaged, vibrant community of alumni and friends worldwide. It helps connect alumni to the University and each other through a wealth of community activities, continuing education programs, online services, and events around the world.
 	</p>	
 	
-
+	
+	<br><br>
+	<div class="container">
+		<a href="https://jkkniu.edu.bd/news/">For more update...</a>
+	</div>
+	<br><br>
 </div>
 
 @endsection
