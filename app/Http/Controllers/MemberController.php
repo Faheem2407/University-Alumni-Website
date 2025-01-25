@@ -115,7 +115,11 @@ class MemberController extends Controller
 		$m = $request->confirm_password;
 				
 		$x = MemberRegistration::where('email',$e)->get();
-		$members = MemberRegistration::all();
+		$members = MemberRegistration::paginate(15);
+		
+		//$members = MemberRegistration::paginate(10);  // Adjust the number as needed
+		//return view('your_view', compact('members'));
+
 		
 		if(count($x)){
 			$y = $x[0]->password;

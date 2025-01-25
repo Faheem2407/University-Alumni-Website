@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container p-5">
     <h1>JKKNIU All Department Alumni List</h1>
 
 	
@@ -46,7 +46,6 @@
 	
 	
 	</table>
-</div>
 	<div class="container">
 		<form action="{{route('auth.login')}}" method="post">
 			@csrf
@@ -54,6 +53,9 @@
 			<input type="submit" value="Member Logout" class="btn btn-primary">
 		</form>
 	</div>
+	
+</div>
+
 </body>
 
 @endsection

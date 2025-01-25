@@ -83,8 +83,6 @@ Jatiya Kabi Kazi Nazrul Islam University was established by the Government of Ba
 
 				The university has a duly qualified and productive band of youthful faculty members and officers/staffs who are deeply committed to the university's mission to produce world class graduates in academic disciplines of arts, social sciences, science & engineering, and business administration - whose services and dedications are urgently needed for the reconstruction of this country.
 			</div>
-			
-			<iframe width="1295" height="400" src="https://www.youtube.com/embed/tmvo09tEpdc?si=ebGJshbA68nGRklF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		</div>
 		<br><br>
 		

@@ -15,24 +15,36 @@
 						@csrf
 						<div class="p-2">
 						<label for="admin_name">Admin Name</label>
-						<input class="form-control form-control-sm" id="admin_name" name="admin_name" placeholder="enter admin name" required>
+						<input class="form-control form-control-sm" id="admin_name" name="admin_name" placeholder="enter admin name" value="{{ old('admin_name') }}">
+							@error('admin_name')
+								<div class="danger text-danger">{{ $message }}</div>
+							@enderror
 						</div>
 						<div class="p-2">
 						<label for="admin_email">Email Address</label>
-						<input class="form-control form-control-sm" id="admin_email" name="admin_email" placeholder="enter email address" required >
+						<input class="form-control form-control-sm" id="admin_email" name="admin_email" placeholder="enter email address" value="{{ old('admin_email') }}">
+							@error('admin_email')
+								<div class="danger text-danger">{{ $message }}</div>
+							@enderror
 						</div>
 						<div class="p-2">
 						<label for="admin_password">Password</label>
-						<input class="form-control form-control-sm" type="password" id="admin_password" name="admin_password" placeholder="enter password" required >
+						<input class="form-control form-control-sm" type="password" id="admin_password" name="admin_password" placeholder="enter password" >
+							@error('admin_password')
+								<div class="danger text-danger">{{ $message }}</div>
+							@enderror
 						</div>
 						<div class="p-2">
 						<label for="admin_confirm_password">Confirm Password</label>
-						<input class="form-control form-control-sm" type="password" id="admin_confirm_password" name="admin_confirm_password" placeholder="enter confirm password" required>
+						<input class="form-control form-control-sm" type="password" id="admin_confirm_password" name="admin_confirm_password" placeholder="enter confirm password">
+									@error('admin_confirm_password')
+										<div class="danger text-danger">{{ $message }}</div>
+									@enderror
 						</div>	
 						<div class="p-2">
 							<label for="department">Department : </label>
 
-							<select  name="department" id="department" required>
+							<select  name="department" id="department" value="{{ old('department') }}">
 							  <option selected>select department name</option>
 							  <option value="superadmin">Super Admin</option>
 							  <option value="cse">CSE</option>
@@ -46,6 +58,9 @@
 							  <option value="film">Film and Media</option>
 							  <option value="philosophy">Philosophy</option>
 							</select> 
+								@error('department')
+									<div class="danger text-danger">{{ $message }}</div>
+								@enderror
 						</div>
 
 						<div class="p-2">
@@ -66,7 +81,6 @@
 							</div>
 							@endsession
 						</div>	
-						-->
 						
 						@if($errors->any())
 							<div class="alert alert-danger">
@@ -77,6 +91,9 @@
 								</ul>
 							</div>
 						@endif
+						-->
+						
+
 												
 						
 						<a href="{{route('auth.admin.login')}}" class="text-center">Login as admin</a>

@@ -26,7 +26,7 @@
 			</div>
 			@endsession
 		</div>
-		-->
+		
 		@if($errors->any())
 			<div class="alert alert-danger">
 				<ul>
@@ -36,31 +36,49 @@
 				</ul>
 			</div>
 		@endif
+		-->
+
 		
 		
 		<div class="p-2">
 			<label for="name">Your Name</label>
-			<input class="form-control form-control-sm" type="text" id="name" name="name" placeholder="enter your name" required value="{{ old('name') }}">
+			<input class="form-control form-control-sm" type="text" id="name" name="name" placeholder="enter your name" value="{{ old('name') }}">
+			@error('name')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
+			
 		</div>
 		<div class="p-2">
 			<label for="fname">Father's Name</label>
-			<input class="form-control form-control-sm" type="text" id="fname" name="fname" placeholder="enter your father's name" required >
+			<input class="form-control form-control-sm" type="text" id="fname" name="fname" placeholder="enter your father's name" value="{{ old('fname') }}">
+			@error('fname')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		<div class="p-2">
 			<label for="mname">Mother's Name</label>
-			<input class="form-control form-control-sm" type="text" id="mname" name="mname" placeholder="enter your mother's name" required>
+			<input class="form-control form-control-sm" type="text" id="mname" name="mname" placeholder="enter your mother's name" value="{{ old('mname') }}">
+			@error('mname')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		<div class="p-2">
 			<label for="phone">Phone No.</label>
-			<input class="form-control form-control-sm" type="text" id="phone" name="phone" placeholder="enter your phone number" required>
+			<input class="form-control form-control-sm" type="text" id="phone" name="phone" placeholder="enter your phone number" value="{{ old('phone') }}">
+			@error('phone')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		<div class="p-2">
 			<label  for="email">Email Address</label>
-			<input class="form-control form-control-sm" type="email" id="email" name="email" placeholder="enter your email address" required>
+			<input class="form-control form-control-sm" type="email" id="email" name="email" placeholder="enter your email address" value="{{ old('email') }}">
+			@error('email')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		<div class="p-2">
 			<label for="department">Department : </label>
-				<select  name="department" id="department" required>
+				<select  name="department" id="department" value="{{ old('department') }}">
 					<option selected>select department name</option>
 					<option value="superadmin">Super Admin</option>
 					<option value="cse">CSE</option>
@@ -74,26 +92,38 @@
 					<option value="film">Film and Media</option>
 					<option value="philosophy">Philosophy</option>
 				</select> 
+			@error('department')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		
 		<div class="p-2">
 			<label for="session">Session</label>
-			<input class="form-control form-control-sm" type="text" id="session" name="session" placeholder="enter your session" required>
+			<input class="form-control form-control-sm" type="text" id="session" name="session" placeholder="enter your session" value="{{ old('session') }}">
+			@error('session')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		<div class="p-2">
 			<label for="address">Address</label>
-			<input class="form-control form-control-sm" type="text" id="address" name="address" placeholder="enter your address" required>
+			<input class="form-control form-control-sm" type="text" id="address" name="address" placeholder="enter your address" value="{{ old('address') }}">
+			@error('address')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		<div class="p-2">
 			<label for="job">Occupation</label>
-			<input class="form-control form-control-sm" type="text" id="job" name="job" placeholder="enter your occupation" required>
+			<input class="form-control form-control-sm" type="text" id="job" name="job" placeholder="enter your occupation" value="{{ old('job') }}">
+			@error('job')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 
 		
 		<div class="p-2">
 			<label for="blood">Blood group:</label>
 
-			<select  name="blood" id="blood">
+			<select  name="blood" id="blood" value="{{ old('blood') }}">
 			  <option selected>select blood group</option>
 			  <option value="A+">A+</option>
 			  <option value="A-">A-</option>
@@ -104,21 +134,33 @@
 			  <option value="O+">O+</option>
 			  <option value="O-">O-</option>
 			</select> 
+			@error('blood')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		
 		<div class="p-2">
 			<label for="image">Upload Your Image</label>
-			<input class="form-control form-control-sm" type="file" id="image" name="image" required>
+			<input class="form-control form-control-sm" type="file" id="image" name="image" value="{{ old('image') }}">
+			@error('image')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 			
 		<div class="p-2">
 			<label for="password">Password</label>
-			<input class="form-control form-control-sm" type="password" id="password" name="password" placeholder="enter password" required>
+			<input class="form-control form-control-sm" type="password" id="password" name="password" placeholder="enter password">
+			@error('password')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 		
 		<div class="p-2">
 			<label for="confirm_password">Confirm Password</label>
-			<input class="form-control form-control-sm" type="password" id="confirm_password" name="confirm_password" placeholder="enter confirm password" required>
+			<input class="form-control form-control-sm" type="password" id="confirm_password" name="confirm_password" placeholder="enter confirm password">
+			@error('confirm_password')
+				<div class="danger text-danger">{{ $message }}</div>
+			@enderror
 		</div>
 
 		
